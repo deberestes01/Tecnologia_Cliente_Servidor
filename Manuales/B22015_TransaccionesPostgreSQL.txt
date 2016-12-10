@@ -1,0 +1,36 @@
+CREATE DATABASE "dbPruebas02";
+
+
+CREATE TABLE tbm_paises
+(
+  co_pai smallint NOT NULL,
+  tx_nom VARCHAR(60) NOT NULL,
+  st_reg character(1) DEFAULT 'A',
+  CONSTRAINT tbm_paises_pk PRIMARY KEY (co_pai)
+);
+
+
+INSERT INTO tbm_paises (co_pai, tx_nom, st_reg) VALUES (1, 'Ecuador', 'A');
+INSERT INTO tbm_paises (co_pai, tx_nom, st_reg) VALUES (2, 'Colombia', 'A');
+INSERT INTO tbm_paises (co_pai, tx_nom, st_reg) VALUES (3, 'Perú', 'A');
+INSERT INTO tbm_paises (co_pai, tx_nom, st_reg) VALUES (4, 'Venezuela', 'A');
+INSERT INTO tbm_paises (co_pai, tx_nom, st_reg) VALUES (5, 'Argentina', 'A');
+INSERT INTO tbm_paises (co_pai, tx_nom, st_reg) VALUES (6, 'Brasil', 'A');
+INSERT INTO tbm_paises (co_pai, tx_nom, st_reg) VALUES (7, 'Bolivia', 'A');
+INSERT INTO tbm_paises (co_pai, tx_nom, st_reg) VALUES (8, 'Chile', 'A');
+INSERT INTO tbm_paises (co_pai, tx_nom, st_reg) VALUES (9, 'Uruguay', 'A');
+INSERT INTO tbm_paises (co_pai, tx_nom, st_reg) VALUES (10, 'Paraguay', 'A');
+INSERT INTO tbm_paises (co_pai, tx_nom, st_reg) VALUES (11, 'México', 'A');
+
+
+
+--Ejecute individualmente el BEGIN para iniciar la transacción.
+BEGIN
+	SELECT * FROM tbm_paises;
+	INSERT INTO tbm_paises(co_pai, tx_nom, st_reg) VALUES(12, 'USA', 'I');
+	INSERT INTO tbm_paises(co_pai, tx_nom, st_reg) VALUES(13, 'Canadá', 'I');
+	INSERT INTO tbm_paises(co_pai, tx_nom, st_reg) VALUES(14, 'Francia', 'I');
+
+ROLLBACK
+
+COMMIT
