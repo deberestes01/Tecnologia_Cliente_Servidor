@@ -1,0 +1,10 @@
+Crear una empresa ficticia y utilizar uno/todos los productos:
+-Google Cloud
+-Amazon Aws
+-Microsoft Azure
+Para el proyecto deben poner a funcionar la empresa en la nube.
+Los servicios mínimos que deben implementar son:
+-Sistema administrativo/contable (CRM/ERP)
+-Página web (Intranet)
+-Servicios de correo
+-2 Servicios propuestos por los estudiantes
